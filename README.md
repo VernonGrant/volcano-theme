@@ -4,4 +4,4 @@ A low contrast dark theme for Vim.
 
 ## Screenshots:
 
-![Volcano Theme](./images/screenshot.jpg "Volcano theme for Vim")
+![Volcano Theme](https://raw.githubusercontent.com/VernonGrant/volcano.vim/main/images/screenshot.jpg "Volcano theme for Vim")
