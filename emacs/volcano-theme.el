@@ -81,6 +81,7 @@
    ;; Mode Line
    `(mode-line                            ((t (:background ,bg-darker))))
    `(mode-line-inactive                   ((t (:background ,bg-lighter))))
+   `(mode-line-buffer-id                  ((t (:foreground ,bg :background ,comment :bold t))))
 
    ;; Column Indicator
    `(fill-column-indicator                ((t (:foreground ,bg-lighter))))
