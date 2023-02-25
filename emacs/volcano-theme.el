@@ -25,18 +25,19 @@
 
 ;;; Code:
 
-(deftheme volcano
-  "volcano theme")
+(require 'color)
 
-(let (
+(deftheme volcano  "A dark theme of orange, yellow and red.")
+
+(let* (
       (fg              "#B2B2B2")
-      (fg-darker       "#A4A4A4")
+      (fg-darker       (color-darken-name fg 10))
       (bg              "#303030")
-      (bg-darker       "#262626")
-      (bg-lighter      "#404040")
+      (bg-darker       (color-darken-name bg 5))
+      (bg-lighter      (color-lighten-name bg 5))
+      (region          bg-darker)
       (cursor          "#D75F5F")
-      (region          "#404040")
-      (attention       "#D75F5F")
+      (attention       cursor)
       (keyword         "#AF875F")
       (constant        "#CDB38B")
       (comment         "#AF5F5F")
@@ -52,7 +53,7 @@
    `(match                                ((t (:background ,region))))
    `(cursor                               ((t (:background ,cursor))))
    `(success                              ((t (:foreground ,keyword))))
-   `(hl-line                              ((t (:background ,bg-darker))))
+   `(hl-line                              ((t (:background ,bg-lighter))))
    `(font-lock-builtin-face               ((t (:foreground ,fg :bold t))))
    `(font-lock-comment-face               ((t (:foreground ,comment :italic t))))
    `(font-lock-doc-string-face            ((t (:foreground ,comment))))
@@ -68,8 +69,8 @@
    `(font-lock-preprocessor-face          ((t (:foreground ,constant))))
 
    ;; Line numbers
-   `(line-number                          ((t (:foreground ,fg  :background ,bg-lighter))))
-   `(line-number-current-line             ((t (:foreground ,fg-darker :background ,bg-darker))))
+   `(line-number                          ((t (:foreground ,comment  :background ,bg-darker))))
+   `(line-number-current-line             ((t (:foreground ,keyword :background ,bg-lighter))))
 
    ;; Help
    `(help-key-binding                     ((t (:foreground ,string))))
@@ -80,14 +81,15 @@
 
    ;; Mode Line
    `(mode-line                            ((t (:background ,bg-darker))))
-   `(mode-line-inactive                   ((t (:background ,bg-lighter))))
-   `(mode-line-buffer-id                  ((t (:foreground ,bg :background ,comment :bold t))))
+   `(mode-line-inactive                   ((t (:background ,bg))))
+   `(mode-line-buffer-id                  ((t (:foreground ,bg-darker :background ,keyword :bold t))))
 
    ;; Column Indicator
    `(fill-column-indicator                ((t (:foreground ,bg-lighter))))
 
-   ;; Vertical Borders
-   `(vertical-border                      ((t (:foreground ,bg-lighter))))
+   ;; Fringes
+   `(fringe                               ((t (:foreground ,bg-darker :background ,bg-darker))))
+   `(vertical-border                      ((t (:foreground ,bg-lighter :background ,bg-lighter))))
 
    ;; Minibuffer
    `(minibuffer-prompt                    ((t (:foreground ,keyword :bold t))))
@@ -151,10 +153,6 @@
    `(web-mode-html-tag-bracket-face       ((t (:foreground ,fg))))
    `(web-mode-html-tag-face               ((t (:foreground ,fg))))
    `(web-mode-html-attr-name-face         ((t (:foreground ,keyword))))
-
-   ;; Cider
-   ;; `(cider-enlightened-face               ((t (:background ,bg))))
-   ;; `(cider-result-overlay-face            ((t (:background ,bg))))
    )
   )
 
