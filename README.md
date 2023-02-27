@@ -1,7 +1,7 @@
 # Volcano Theme
 
-A low contrast dark theme for Emacs, Vim, Tmux and Kitty.
+A low contrast dark theme for Emacs, Tmux and Kitty.
 
 ## Screenshots:
 
-![Volcano Theme](https://raw.githubusercontent.com/VernonGrant/volcano.vim/main/images/screenshot.jpg "Volcano theme for Vim")
+![Volcano Theme](https://github.com/VernonGrant/volcano-theme/blob/main/images/screenshot.jpg "Volcano theme")
