@@ -35,6 +35,7 @@
       (bg              "#303030")
       (bg-darker       (color-darken-name bg 5))
       (bg-lighter      (color-lighten-name bg 5))
+      (whitespace      (color-lighten-name bg 20))
       (region          bg-darker)
       (cursor          "#D75F5F")
       (attention       cursor)
@@ -71,6 +72,15 @@
    ;; Line numbers
    `(line-number                          ((t (:foreground ,comment  :background ,bg-darker))))
    `(line-number-current-line             ((t (:foreground ,keyword :background ,bg-lighter))))
+
+   ;; Whitespace
+   `(whitespace                           ((t (:foreground ,whitespace))))
+   `(whitespace-empty                     ((t (:foreground ,whitespace))))
+   `(whitespace-indentation               ((t (:background ,bg-darker))))
+   `(whitespace-newline                   ((t (:foreground ,whitespace))))
+   `(whitespace-space                     ((t (:foreground ,whitespace))))
+   `(whitespace-tab                       ((t (:foreground ,whitespace))))
+   `(whitespace-trailing                  ((t (:foreground ,warning))))
 
    ;; Help
    `(help-key-binding                     ((t (:foreground ,string))))
