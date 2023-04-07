@@ -25,24 +25,23 @@
 
 ;;; Code:
 
-(require 'color)
-
 (deftheme volcano  "A dark theme of orange, yellow and red.")
 
 (let* (
-      (fg              "#B2B2B2")
-      (fg-darker       (color-darken-name fg 10))
-      (bg              "#303030")
-      (bg-darker       (color-darken-name bg 5))
-      (bg-lighter      (color-lighten-name bg 5))
-      (whitespace      (color-lighten-name bg 20))
+      (fg              "#a9a9a9")
+      (fg-darker       "#696969")
+      (bg              "#171717")
+      (bg-darker       "#101010")
+      (bg-lighter      "#1c1c1c")
+      (whitespace      "#333333")
       (region          bg-darker)
-      (cursor          "#D75F5F")
+      (cursor          "#ff7f50")
       (attention       cursor)
-      (keyword         "#AF875F")
-      (constant        "#CDB38B")
-      (comment         "#AF5F5F")
-      (string          "#AFD787")
+      (comment         "#8b7355")
+      (constant        "#AF875F")
+      ;; (keyword         "#9370db")
+      (keyword         "#AF5F5F")
+      (string          "#8fbc8f")
       (warning         "#D7875F"))
   (custom-theme-set-faces
    'volcano
@@ -70,8 +69,8 @@
    `(font-lock-preprocessor-face          ((t (:foreground ,constant))))
 
    ;; Line numbers
-   `(line-number                          ((t (:foreground ,comment  :background ,bg-darker))))
-   `(line-number-current-line             ((t (:foreground ,keyword :background ,bg-lighter))))
+   `(line-number                          ((t (:foreground ,fg-darker  :background ,bg-darker))))
+   `(line-number-current-line             ((t (:foreground ,keyword :background ,bg-lighter :bold t))))
 
    ;; Whitespace
    `(whitespace                           ((t (:foreground ,whitespace))))
