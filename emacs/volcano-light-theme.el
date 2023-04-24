@@ -1,4 +1,4 @@
-;;; volcano-theme.el --- think theme
+;;; volcano-light-theme.el --- think theme
 ;; Copyright (C) 2022 by Vernon Grant
 
 ;; Author: Vernon Grant <vernon@ruppell.io>
@@ -21,29 +21,29 @@
 
 ;;; Commentary:
 ;;
-;; Volcano theme for Emacs, used by Vernon Grant.
+;; Volcano lighttheme for Emacs, used by Vernon Grant.
 
 ;;; Code:
 
-(deftheme volcano  "A dark theme of orange, yellow and red.")
+(deftheme volcano-light  "A dark theme of orange, yellow and red.")
 
 (let* (
-      (fg              "#a9a9a9")
-      (fg-darker       "#696969")
-      (bg              "#212121")
-      (bg-darker       "#1c1c1c")
-      (bg-lighter      "#292929")
-      (whitespace      "#333333")
-      (region          bg-darker)
-      (cursor          "#cd6600")
-      (attention       cursor)
-      (comment         "#8b7355")
-      (constant        "#AF875F")
-      (keyword         "#AF5F5F")
-      (string          "#8fbc8f")
-      (warning         "#D7875F"))
+       (fg         "#3d3d3d")
+       (fg-darker  "#8a8a8a")
+       (bg         "#f2f2f2")
+       (bg-darker  "#dedede")
+       (bg-lighter "#fafafa")
+       (whitespace "#cfcfcf")
+       (region     bg-darker)
+       (cursor     "#cd6600")
+       (attention  cursor)
+       (comment    "#8b7355")
+       (constant   "#af875f")
+       (keyword    "#af5f5f")
+       (string     "#3cb371")
+       (warning    "#d7875f"))
   (custom-theme-set-faces
-   'volcano
+   'volcano-light
 
    ;; General
    `(default                              ((t (:background ,bg :foreground ,fg))))
@@ -168,6 +168,6 @@
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
-(provide-theme 'volcano)
+(provide-theme 'volcano-light)
 
-;;; volcano-theme.el ends here
+;;; volcano-light-theme.el ends here

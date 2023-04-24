@@ -1,7 +1,11 @@
 # Volcano Theme
 
-A low contrast dark theme for Emacs, Tmux and Kitty.
+A low contrast theme for Emacs and the Mac terminal.
 
-## Screenshots:
+### Volcano Dark
 
-![Volcano Theme](https://github.com/VernonGrant/volcano-theme/blob/main/images/screenshot.jpg "Volcano theme")
+![Volcano Dark Theme](https://github.com/VernonGrant/volcano-theme/blob/main/images/screenshot-dark.jpg "Volcano light theme")
+
+### Volcano Light
+
+![Volcano Light Theme](https://github.com/VernonGrant/volcano-theme/blob/main/images/screenshot-light.jpg "Volcano light theme")
